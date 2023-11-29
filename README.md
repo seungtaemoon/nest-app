@@ -26,13 +26,47 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+### 목적: 마음연구소 설문지 과제
 
+### ERD
+![survey (3)](https://github.com/seungtaemoon/nest-app/assets/53979008/6ce8dc32-9e61-4985-80dc-c943af26b867)
+
+### 사용기술
+- NestJS
+- TypeScript
+- TypeORM
+- PostgreSQL
+
+## Installation(설치)
+
+1. npm 설치
 ```bash
-$ npm install
+$ npm install 
 ```
 
-## Running the app
+2. nestjs 클라이언트 설치
+```bash
+$ npm i -g @nestjs/cli
+```
+
+3. 프로젝트 폴더에서 nestjs 클라이언트 초기화(아래 커맨드 입력 후 프로젝트 폴더와 같은 폴더이름입력) 
+```bash
+$ nest new
+```
+
+- **프로젝트내 아래와 같이 구조가 생성되어야함**
+
+![image](https://github.com/seungtaemoon/nest-app/assets/53979008/3efecd32-b1e8-43a3-96ea-ab77f29a7fd1)
+
+- **성공적으로 해당 레포의 코드가 포함된 프로젝트 폴더에서 클라이언트 초기화 시 `src`내 아래와 같은 구조가 생성됨**
+
+![image](https://github.com/seungtaemoon/nest-app/assets/53979008/9306553c-dcb2-41df-b8fb-6ec78a7962b9)
+
+
+## Running the app(프로그램 실행)
+
+- 포트: 4000번으로 기본 설정 ( `main.ts` 내 설정 됨)
+- 설명: 아래와 같이 3가지 다른 모드에 따른 프로그램 실행 가능
 
 ```bash
 # development
@@ -45,7 +79,9 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## Test(테스트 실행 방법)
+
+- 설명: 아래와 같이 3가지 다른 조건에 따른 테스트 실행 가능
 
 ```bash
 # unit tests
