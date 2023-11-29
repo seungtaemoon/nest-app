@@ -6,6 +6,7 @@ import { AppModule } from './app.module';
 import { Answers } from "./entity/answers.entity";
 import { Questions } from "./entity/questions.entity";
 import { Choices } from "./entity/choices.entity";
+import { HttpExceptionFilter } from './common/http-exception.filter';
 
 AppDataSource.initialize().then(async () => {
 
@@ -36,6 +37,7 @@ AppDataSource.initialize().then(async () => {
 
 async function bootstrap() {
     const app = await NestFactory.create(AppModule);
+    app.useGlobalFilters(new HttpExceptionFilter());
     await app.listen(4000);
   }
   bootstrap();
